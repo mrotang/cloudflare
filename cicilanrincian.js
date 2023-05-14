@@ -20,7 +20,7 @@ function formatRupiah(angka) {
       };
 
       let tableHtml = '<table>';
-      tableHtml += '<tr><th>Jangka Waktu</th><th>Cicilan per Bulan</th></tr>';
+      tableHtml += '<h3>Rincian Cicilan</h3><tr><th>Jangka Waktu</th><th>Cicilan per Bulan</th></tr>';
       for (const jangkaWaktu in rincianCicilan) {
         tableHtml += '<tr><td>' + jangkaWaktu + '</td><td>' + formatRupiah(rincianCicilan[jangkaWaktu]) + '</td></tr>';
       }

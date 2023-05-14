@@ -1,26 +1,31 @@
-document.getElementById('loanForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      var loanAmount = parseInt(document.getElementById('loanAmount').value);
-      var interestRate = 1.5; // Suku bunga 1.5%
-
-      var installments = [6, 12, 24]; // Rincian cicilan
-
-      var resultHTML = '<h3>Rincian Cicilan</h3>';
-      resultHTML += '<table>';
-      resultHTML += '<tr><th>Bulan</th><th>Cicilan (Rp)</th></tr>';
-
-      for (var i = 0; i < installments.length; i++) {
-        var months = installments[i];
-        var monthlyInterestRate = (interestRate / 100) / 12;
-        var monthlyPayment = Math.round((loanAmount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -months)));
-        monthlyPayment = Math.ceil(monthlyPayment / 100) * 100; // Bulatkan ke bilangan ratusan
-        resultHTML += '<tr><td>' + months + '</td><td>' + formatCurrency(monthlyPayment) + '</td></tr>';
+function formatRupiah(angka) {
+      let rupiah = '';
+      let angkarev = angka.toString().split('').reverse().join('');
+      for (let i = 0; i < angkarev.length; i++) {
+        if (i % 3 === 0) {
+          rupiah += angkarev.substr(i, 3) + '.';
+        }
       }
+      return 'Rp ' + rupiah.split('', rupiah.length - 1).reverse().join('');
+    }
 
-      resultHTML += '</table>';
-      document.getElementById('result').innerHTML = resultHTML;
-    });
+    function hitungCicilan() {
+      const uangPinjaman = parseInt(document.getElementById('uangPinjaman').value);
+      const bunga = 0.005;
 
-    function formatCurrency(amount) {
-      return 'Rp ' + amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      const rincianCicilan = {
+        '6 Bulan': Math.round(uangPinjaman / 6 / 100) * 100,
+        '12 Bulan': Math.round(uangPinjaman / 12 / 100) * 100,
+        '24 Bulan': Math.round(uangPinjaman / 24 / 100) * 100
+      };
+
+      let tableHtml = '<table>';
+      tableHtml += '<tr><th>Jangka Waktu</th><th>Cicilan per Bulan</th></tr>';
+      for (const jangkaWaktu in rincianCicilan) {
+        tableHtml += '<tr><td>' + jangkaWaktu + '</td><td>' + formatRupiah(rincianCicilan[jangkaWaktu]) + '</td></tr>';
+      }
+      tableHtml += '</table>';
+
+      document.getElementById('cicilanTable').innerHTML = tableHtml;
+      document.getElementById('totalPinjaman').innerText = 'Jumlah Pinjaman: ' + formatRupiah(uangPinjaman);
     }

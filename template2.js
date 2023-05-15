@@ -230,6 +230,28 @@ setTimeout(function() {
   document.body.style.overflow = "auto";
 }, 5000);
 </script>
+<script>
+var currentUrl = window.location.href;
+var parsedUrl = new URL(currentUrl);
+var params = parsedUrl.searchParams;
+params.delete('');
+
+var countdownButton = document.getElementById('countdown-button');
+
+  var countdown = 10;
+  var countdownInterval = setInterval(function() {
+    countdown--;
+    countdownButton.textContent = 'Hitung Mundur ' + countdown;
+
+    if (countdown === 0) {
+      countdownButton.removeAttribute('disabled');
+      countdownButton.textContent = 'Klik Sekarang!';
+      clearInterval(countdownInterval);
+    }
+  }, 1000);
+var newUrl = parsedUrl.origin + parsedUrl.pathname;
+console.log(newUrl);
+</script>
 <div class="cfmonitor"><center><script type="text/javascript">
         $(document).ready(function() {$('img#closed').click(function(){$('#btm_banner').hide(90);});});
 </script>

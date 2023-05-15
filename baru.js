@@ -88,7 +88,7 @@ h1 {
 </script></center></div>                                </div>
 								
                                 <div style="display:block;width:100%;position:relative;margin-bottom:5px;margin-top:5px;text-align:center;">
-                                    <a href="https://bloggzone.me/br21r/?br21r=2" class="btn btn-danger" style="background: #c60000;border-color: #970606;">
+                                    <a href="https://autoupsense.mastimon.workers.dev/?br21r=2" class="btn btn-danger" style="background: #c60000;border-color: #970606;">
 										<strong>Download or Watch Now (29.8 MB)</strong>
 									</a>
                                 </div>
@@ -241,6 +241,7 @@ setTimeout(function() {
   document.body.style.overflow = "auto";
 }, 5000);
 </script>
+
 <div class="cfmonitor"><center><script type="text/javascript">
         $(document).ready(function() {$('img#closed').click(function(){$('#btm_banner').hide(90);});});
 </script>

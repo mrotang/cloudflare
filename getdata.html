@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Mendapatkan parameter dari URL
+      var urlParams = new URLSearchParams(window.location.search);
+      var br21rParam = urlParams.get('br21r');
+
+      // Jika parameter br21r adalah 3
+      if (br21rParam === '3') {
+        // Mengambil konten dari URL yang diberikan
+        var url = 'https://infokredit.tiger.web.id/2023/04/kredit-hp-xiaomi-poco-c40-3gb32gb.html';
+        $.get(url, function(data) {
+          // Menemukan tag <article> di dalam data HTML
+          var articleContent = $(data).find('article').html();
+
+          // Mengganti konten di dalam tag <article> pada halaman ini
+          $('article').html(articleContent);
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <article>
+    <h2>Kalkulator Kredit</h2>
+    <p class='ana'>asik</p>
+    <p class='ojak'>sombong</p>
+  </article>
+</body>
+</html>

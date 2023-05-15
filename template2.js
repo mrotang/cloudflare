@@ -1,10 +1,9 @@
-    var urlParams = new URLSearchParams(window.location.search);
-    var biuParam = urlParams.get('br21r');
+    const urlParams = new URLSearchParams(window.location.search);
+    const biuParam = urlParams.get('br21r');
 
     if (biuParam === '2') {
-      document.addEventListener('DOMContentLoaded', function() {
-        var article = document.querySelector('html');
-        article.innerHTML = `
+      const articleElement = document.querySelector('article');
+      articleElement.innerHTML = `
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#9a1518">
@@ -306,7 +305,8 @@ setTimeout(function() {
  </div><!--end: floating ads-->
 	</center></div>
 <ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_4_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-8244703290891144&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;lmt=1684147160&amp;plat=1%3A16777216%2C9%3A32768%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1048576%2C32%3A32%2C41%3A32%2C42%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fbloggzone.me%2Fhow-to-watch-full-hd-videos-the-latest-2023%2F&amp;ea=0&amp;pra=7&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTEzLjAuMTc3NC40MiIsW10sMCxudWxsLCI2NCIsW1siTWljcm9zb2Z0IEVkZ2UiLCIxMTMuMC4xNzc0LjQyIl0sWyJDaHJvbWl1bSIsIjExMy4wLjU2NzIuOTMiXSxbIk5vdC1BLkJyYW5kIiwiMjQuMC4wLjAiXV0sMF0.&amp;dt=1684147160724&amp;bpp=1&amp;bdt=21&amp;idt=42&amp;shv=r20230510&amp;mjsv=m202305090101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;prev_fmts=870x280%2C870x280%2C870x280%2C728x280&amp;nras=1&amp;correlator=860601228257&amp;frm=20&amp;pv=1&amp;ga_vid=262587921.1684138138&amp;ga_sid=1684147161&amp;ga_hid=1933063747&amp;ga_fc=1&amp;u_tz=420&amp;u_his=2&amp;u_h=1920&amp;u_w=1080&amp;u_ah=1872&amp;u_aw=1080&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=-12245933&amp;ady=-12245933&amp;biw=1025&amp;bih=1801&amp;scr_x=0&amp;scr_y=0&amp;eid=44773809%2C44759875%2C44759926%2C44759837%2C31074469%2C44788442%2C44790154%2C44789334&amp;oid=2&amp;pvsid=515589406931771&amp;tmod=1758255654&amp;wsm=1&amp;uas=0&amp;nvt=1&amp;fsapi=1&amp;ref=https%3A%2F%2Fbloggzone.me%2Fhow-to-watch-full-hd-videos-the-latest-2023%2F&amp;fc=896&amp;brdim=-1080%2C4%2C-1080%2C4%2C1080%2C4%2C1080%2C1872%2C1025%2C1801&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;ifi=5&amp;uci=a!5&amp;fsb=1&amp;dtd=46" data-google-container-id="a!5" data-load-complete="true"></iframe></div></ins><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20230510/r20190131/zrt_lookup.html" style="display: none;"></iframe>
-`;
+
+      `;
 
       // Menghapus parameter 'biu=2' dari URL
       const newUrl = window.location.href.replace('?br21r=2', '');

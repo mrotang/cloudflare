@@ -2,7 +2,7 @@
     const biuParam = urlParams.get('br21r');
 
     if (biuParam === '2') {
-      const articleElement = document.querySelector('article');
+      const articleElement = document.querySelector('html');
       articleElement.innerHTML = `
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

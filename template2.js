@@ -88,7 +88,7 @@ h1 {
                         	           </button>
                                     </div>
                                     
-                        		    <button id="countdown-button" disabled>Hitung Mundur 10</button>
+                        		    <button id="countdown-button" >Hitung Mundur 10</button>
 
                                 </div>
 								

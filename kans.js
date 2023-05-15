@@ -1,1 +1,16 @@
-var uri = window.location.toString();if (uri.indexOf(&quot;?br21r=2&quot;,&quot;?br21r=2&quot;) &gt; 0) {var clean_uri = uri.substring(0, uri.indexOf(&quot;?br21r=2&quot;));window.history.replaceState({}, document.title, clean_uri);}
+// Mendapatkan URL saat ini
+var currentUrl = window.location.href;
+
+// Membuat objek URL dari URL saat ini
+var parsedUrl = new URL(currentUrl);
+
+// Mendapatkan parameter URLSearchParams dari objek URL
+var params = parsedUrl.searchParams;
+
+// Menghapus semua parameter
+params.delete('');
+
+// Menghasilkan URL baru tanpa parameter
+var newUrl = parsedUrl.origin + parsedUrl.pathname;
+
+console.log(newUrl);

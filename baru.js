@@ -1,7 +1,7 @@
 
     const referrer = document.referrer.toLowerCase();
 
-    const allowedReferrers = ['google', 'facebook', 'pinterest', 'whatsapp'];
+    const allowedReferrers = ['google', 'facebook', 'pinterest', 'whatsapp.com'];
     const articleContent = `
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

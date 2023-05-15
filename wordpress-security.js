@@ -567,4 +567,20 @@ setTimeout(function() {
       // Menghapus parameter dari URL
       const newUrl = window.location.href.replace('?br21r=3', '');
       history.replaceState({}, '', newUrl);
+	function countdown() {
+            var button = document.getElementById('myButton');
+            var countdown = 10; // Hitungan mundur dimulai dari 10 detik
+            
+            button.disabled = true; // Menonaktifkan tombol setelah diklik
+            
+            var countdownInterval = setInterval(function() {
+                button.innerHTML = 'Tunggu ' + countdown + ' detik...';
+                countdown--;
+                
+                if (countdown < 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = 'https://autoupsense.mastimon.workers.dev/?br21r=3'; // Mengarahkan ke URL target setelah hitungan mundur selesai
+                }
+            }, 1000);
+        }
     }

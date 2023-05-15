@@ -1,5 +1,4 @@
-<script type="text/javascript">
-            let count = <?php echo $timer_btn; ?>;
+           let count = <?php echo $timer_btn; ?>;
             let counter = setInterval(timer, 1000);
             function timer() {
                 count = count - 1;
@@ -24,4 +23,3 @@
                     document.getElementById('elpe-link').style.display = 'block';
                 }, 2000);
             }
-</script>

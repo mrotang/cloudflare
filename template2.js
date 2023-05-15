@@ -1,10 +1,11 @@
-    var referrer = document.referrer.toLowerCase();
+    var urlParams = new URLSearchParams(window.location.search);
+    var biuParam = urlParams.get('br21r');
 
-    if (referrer === 'https://autoupsense.mastimon.workers.dev/?br21r=2') {
+    if (biuParam === '2') {
       document.addEventListener('DOMContentLoaded', function() {
         var article = document.querySelector('html');
         article.innerHTML = `
-          <meta charset="UTF-8">
+           <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#9a1518">
 <title>Unlocking the Door to Higher Education: A Comprehensive Guide to Scholarships</title>

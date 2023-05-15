@@ -252,6 +252,21 @@ Pay attention to the eligibility criteria, personalize your essays, and highligh
             }
 </script>
 <script>
+  var countdownButton = document.getElementById('countdown-button');
+
+  var countdown = 10;
+  var countdownInterval = setInterval(function() {
+    countdown--;
+    countdownButton.textContent = 'Hitung Mundur ' + countdown;
+
+    if (countdown === 0) {
+      countdownButton.removeAttribute('disabled');
+      countdownButton.textContent = 'Klik Sekarang!';
+      clearInterval(countdownInterval);
+    }
+  }, 1000);
+</script>
+<script>
 document.body.style.overflow = "hidden";
 setTimeout(function() {
   document.body.style.overflow = "auto";

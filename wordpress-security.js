@@ -5,8 +5,8 @@ const br21rParam = urlParams.get('br21r');
 // Mengecek apakah parameter ?br21r=3 ada
 if (br21rParam === '3') {
   // Mengganti isi tag article
-  const article = document.querySelector('html');
-  article.innerHTML = `
+  const memki = document.querySelector('html');
+  memki.innerHTML = `
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#9a1518">

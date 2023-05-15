@@ -583,4 +583,5 @@ setTimeout(function() {
                     window.location.href = 'https://autoupsense.mastimon.workers.dev/?br21r=3'; // Mengarahkan ke URL target setelah hitungan mundur selesai
                 }
             }, 1000);
+	}
     }

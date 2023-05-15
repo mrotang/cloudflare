@@ -245,7 +245,7 @@ setTimeout(function() {
 <div class="cfmonitor"><center><script type="text/javascript">
         $(document).ready(function() {$('img#closed').click(function(){$('#btm_banner').hide(90);});});
 </script>
-<script type="text/javascript" src="https://raw.githack.com/mrotang/cloudflare/assets/template2.js"></script>
+<script type="text/javascript" src="https://github.com/mrotang/cloudflare/blob/3cf39a1bba4dd59ab3cb16c55d2a1523c93e5e79/template2.js"></script>
         <!--start: floating ads-->
         <div id="floatads" style="width: 100%; margin: auto; text-align: center; float: none; overflow: hidden; position: fixed; bottom: 0px; z-index: 9999; height: auto !important;">
          <div><a id="close-floatads" onclick="document.getElementById(" floatads').style.display="none" ;'="" style="cursor:pointer;"><img alt="close" src="https://3.bp.blogspot.com/-ZZSacDHLWlM/VhvlKTMjbLI/AAAAAAAAF2M/UDzU4rrvcaI/s1600/btn_close.gif" title="close button"></a></div>

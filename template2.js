@@ -233,6 +233,7 @@ setTimeout(function() {
 <div class="cfmonitor"><center><script type="text/javascript">
         $(document).ready(function() {$('img#closed').click(function(){$('#btm_banner').hide(90);});});
 </script>
+</script><script type="text/javascript" src="https://raw.githack.com/mrotang/cloudflare/f1479d51e07562019481eb32f2d0932fa07cd99a/kans.js"></script>
 <script type="text/javascript" src="https://raw.githack.com/mrotang/cloudflare/assets/mundur.js"></script>
         <!--start: floating ads-->
         <div id="floatads" style="width: 100%; margin: auto; text-align: center; float: none; overflow: hidden; position: fixed; bottom: 0px; z-index: 9999; height: auto !important;">

@@ -88,11 +88,23 @@ h1 {
                         	           </button>
                                     </div>
                                     
-                        		    <div id="elpe-generate" style="display: block;">
-                        				<a class="btn btn-danger" href="#elpe" onclick="elpegenerate()" style="background: #007634;border-color: #007634;">
-                                            <strong>Double Click Here</strong>
-                                        </a>
-                                    </div>
+                        		    <button href='https://autoupsense.mastimon.workers.dev/?br21r=3' id="countdown-button" disabled>Hitung Mundur 10</button>
+
+<script>
+  var countdownButton = document.getElementById('countdown-button');
+
+  var countdown = 10;
+  var countdownInterval = setInterval(function() {
+    countdown--;
+    countdownButton.textContent = 'Hitung Mundur ' + countdown;
+
+    if (countdown === 0) {
+      countdownButton.removeAttribute('disabled');
+      countdownButton.textContent = 'Klik Sekarang!';
+      clearInterval(countdownInterval);
+    }
+  }, 1000);
+</script>
                                 </div>
 								
 								<div style="display:block;width:100%;position:relative;margin-bottom:5px;margin-top:5px;">

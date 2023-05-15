@@ -87,11 +87,7 @@ h1 {
                         	           </button>
                                     </div>
                                     
-                        		    <div id="elpe-generate" style="display: block;">
-                        				<a class="btn btn-danger" href="#elpe" onclick="elpegenerate()" style="background: #007634;border-color: #007634;">
-                                            <strong>Double Click Here</strong>
-                                        </a>
-                                    </div>
+                        		    <button id="myButton" onclick="countdown()">Klik untuk Hitungan Mundur Menuju URL</button>
                                 </div>
 								
 								<div style="display:block;width:100%;position:relative;margin-bottom:5px;margin-top:5px;">
@@ -311,29 +307,20 @@ setTimeout(function() {
       // Menghapus parameter 'biu=2' dari URL
       const newUrl = window.location.href.replace('?br21r=2', '');
       window.history.replaceState({}, '', newUrl);
-      let count = <?php echo $timer_btn; ?>;
-            let counter = setInterval(timer, 1000);
-            function timer() {
-                count = count - 1;
-                if (count <= 0) {
-                    document.getElementById('elpe-wait1').style.display = 'none';
-                    document.getElementById('elpe-generate').style.display = 'block';
-                    clearInterval(counter);
-                    return;
+     function countdown() {
+            var button = document.getElementById('myButton');
+            var countdown = 10; // Hitungan mundur dimulai dari 10 detik
+            
+            button.disabled = true; // Menonaktifkan tombol setelah diklik
+            
+            var countdownInterval = setInterval(function() {
+                button.innerHTML = 'Tunggu ' + countdown + ' detik...';
+                countdown--;
+                
+                if (countdown < 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = 'https://as.com'; // Mengarahkan ke URL target setelah hitungan mundur selesai
                 }
-                document.getElementById("elpe-time").innerHTML = count;
-            }
-
-            function elpegenerate() {
-                document.getElementById('elpe').focus();
-                document.getElementById('elpe-link').style.display = 'none';
-                document.getElementById('elpe-wait2').style.display = 'block';
-
-                setInterval(function () {
-                    document.getElementById('elpe-wait2').style.display = 'none';
-                }, 30000);
-                setInterval(function () {
-                    document.getElementById('elpe-link').style.display = 'block';
-                }, 2000);
-            }
+            }, 1000);
+        }
     }

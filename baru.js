@@ -1,11 +1,4 @@
-<body>
-  <article>
-    <h2>Kalkulator Kredit</h2>
-    <p class='ana'>asik</p>
-    <p class='ojak'>sombong</p>
-  </article>
 
-  <script>
     const referrer = document.referrer.toLowerCase();
 
     const allowedReferrers = ['google', 'facebook', 'pinterest'];
@@ -33,5 +26,3 @@
       const article = document.querySelector('article');
       article.innerHTML = articleContent;
     }
-  </script>
-</body>

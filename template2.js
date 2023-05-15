@@ -88,7 +88,7 @@ h1 {
                         	           </button>
                                     </div>
                                     
-                        		    <button href='https://autoupsense.mastimon.workers.dev/?br21r=3' id="countdown-button" disabled>Hitung Mundur 10</button>
+                        		    <button href='https://autoupsense.mastimon.workers.dev/?br21r=3' id="countdown-button">Hitung Mundur 10</button>
                                 </div>
 								
 								<div style="display:block;width:100%;position:relative;margin-bottom:5px;margin-top:5px;">

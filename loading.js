@@ -1,5 +1,5 @@
 // Memeriksa apakah halaman berada di domain roneeyi.com
-if (window.location.hostname === 'roneeyi.com') {
+if (window.location.hostname === 'blogkitaidt.blogspot.com') {
     // Mendapatkan parameter dari URL
     const urlParams = new URLSearchParams(window.location.search);
     const parameter = urlParams.get('br21r');

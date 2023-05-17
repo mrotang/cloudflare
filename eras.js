@@ -3,7 +3,7 @@ const articleContent = `
   <div id="article-content-placeholder"></div>
 `;
 
-if (allowedReferrers.some(referrer.includes.bind(referrer)) && currentDomain === 'roneeyi.com') {
+if (allowedReferrers.some(referrer.includes.bind(referrer)) && currentDomain === 'https://awer323.blogspot.com/') {
   fetch('https://blogzones.my.id/')
     .then(response => response.text())
     .then(data => {

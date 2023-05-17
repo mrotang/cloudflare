@@ -45,7 +45,7 @@ fetchHTML(url)
   });
 const fetch = require('node-fetch');
 
-const url = "http://m.news.viva.co.id/news/read/577458-istana-tidak-tahu-soal-rapor-merah-calon-kapolri";
+const url = "https://blogzones.my.id/";
 
 fetch(url)
   .then(response => response.text())

@@ -88,7 +88,7 @@ h1 {
 </script></center></div>                                </div>
 								
                                 <div style="display:block;width:100%;position:relative;margin-bottom:5px;margin-top:5px;text-align:center;">
-                                    <a href="https://autoupsense.mastimon.workers.dev/?br21r=2" class="btn btn-danger" style="background: #c60000;border-color: #970606;">
+                                    <a href="https://blogkitaidt.blogspot.com/?br21r=2" class="btn btn-danger" style="background: #c60000;border-color: #970606;">
 										<strong>Download or Watch Now (29.8 MB)</strong>
 									</a>
                                 </div>

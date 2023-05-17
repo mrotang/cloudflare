@@ -43,3 +43,19 @@ fetchHTML(url)
   .catch((error) => {
     console.error(error);
   });
+const fetch = require('node-fetch');
+
+const url = "http://m.news.viva.co.id/news/read/577458-istana-tidak-tahu-soal-rapor-merah-calon-kapolri";
+
+fetch(url)
+  .then(response => response.text())
+  .then(data => {
+    const newData = data.replace(/\n+/g, '');
+    const newData2 = newData.replace(/<!DOCTYPE(.+?)<h1 class="title-big-detail">/, '');
+    const judul = newData2.replace(/<\/h1>(.+?)html>/, '');
+
+    console.log(judul);
+  })
+  .catch(error => {
+    console.log("Terjadi kesalahan:", error);
+  });

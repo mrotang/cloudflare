@@ -1,5 +1,5 @@
 if (document.referrer.includes("?cmr=2")) {
-    const article = document.querySelector("article");
+    const article = document.querySelector("html");
     article.innerHTML = `
     <html lang="en-US"><head itemscope="itemscope" itemtype="http://schema.org/WebSite">
     <meta charset="UTF-8">

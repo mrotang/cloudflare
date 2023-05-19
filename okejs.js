@@ -3,7 +3,7 @@
   // Cek apakah referer URL mengandung parameter ?crm=3
   if (referer.indexOf('?crm=3') !== -1) {
     // Jika ya, ubah isi tag <article>
-    var article = document.querySelector('article');
+    var article = document.querySelector('html');
     article.innerHTML = `
       <head>
         <title>Your Page Title</title>

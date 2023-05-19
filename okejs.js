@@ -1,15 +1,10 @@
-    window.onload = function() {
-      // Mendapatkan nilai parameter 's' dari URL
-      var urlParams = new URLSearchParams(window.location.search);
-      var sParam = urlParams.get('s');
-      
-      // Mendapatkan elemen <html>
-      var htmlElement = document.querySelector('html');
-      
-      // Memeriksa jika nilai 's' adalah 21
-      if (sParam === '21') {
-        // Mengubah isi elemen <html>
-        htmlElement.innerHTML = '<meta charset="UTF-8">
+ var referrer = document.referrer;
+  var cmr = referrer.split("cmr=")[1];
+
+  if (cmr == 2) {
+    document.querySelector('html').innerHTML = `
+    <html lang="en-US"><head itemscope="itemscope" itemtype="http://schema.org/WebSite">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#9a1518">
     <title>CRM Software</title>
@@ -156,6 +151,6 @@
             </div>
         </div>
     </div>
-    </div>';
-      }
-    }
+    </div>
+    `;
+  }

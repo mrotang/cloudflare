@@ -1,14 +1,6 @@
-  var referer = document.referrer;
-
-  // Mengecek apakah URL referer memiliki parameter "?crm=3"
-  if (referer.indexOf("?crm=3") !== -1) {
-    // Jika parameter ditemukan, ubah isi tag <article>
-    document.addEventListener("DOMContentLoaded", function() {
-      var article = document.querySelector("html");
-
-      // Mengubah isi tag <article>
-      article.innerHTML = `
-         <html lang="en-US"><head itemscope="itemscope" itemtype="http://schema.org/WebSite">
+if (document.referrer.includes("?crm=3")) {
+  const article = document.querySelector("html");
+  article.innerHTML = `
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#9a1518">
@@ -157,7 +149,5 @@
         </div>
     </div>
     </div>
-    </html>
-      `;
-    });
-  }
+  `;
+}

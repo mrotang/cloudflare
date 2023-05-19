@@ -1,18 +1,19 @@
-  window.addEventListener('DOMContentLoaded', function() {
-    var referer = document.referrer;
-    if (referer.includes('?crm=3')) {
-      var article = document.querySelector('article');
-      article.innerHTML = `
-        <head>
-          <title>Your Page Title</title>
-        </head>
-        <body>
-          <div>
-            <div class="content-wrapper">
-              <header></header>
-            </div>
+  var referer = document.referrer;
+
+  // Cek apakah referer URL mengandung parameter ?crm=3
+  if (referer.indexOf('?crm=3') !== -1) {
+    // Jika ya, ubah isi tag <article>
+    var article = document.querySelector('article');
+    article.innerHTML = `
+      <head>
+        <title>Your Page Title</title>
+      </head>
+      <body>
+        <div>
+          <div class="content-wrapper">
+            <header></header>
           </div>
-        </body>
-      `;
-    }
-  });
+        </div>
+      </body>
+    `;
+  }

@@ -1,8 +1,6 @@
- var referrer = document.referrer;
-  var cmr = referrer.split("cmr=")[1];
-
-  if (cmr == 2) {
-    document.querySelector('html').innerHTML = `
+if (document.referrer.includes("?cmr=2")) {
+    const article = document.querySelector("article");
+    article.innerHTML = `
     <html lang="en-US"><head itemscope="itemscope" itemtype="http://schema.org/WebSite">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -152,5 +150,5 @@
         </div>
     </div>
     </div>
-    `;
+    </html>`;
   }

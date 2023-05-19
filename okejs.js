@@ -1,11 +1,23 @@
+  // Fungsi untuk mendapatkan nilai parameter dari URL
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  // Ambil referer URL dari header HTTP
   var referer = document.referrer;
 
   // Cek apakah referer URL mengandung parameter ?crm=3
-  if (referer.indexOf('?crm=3') !== -1) {
+  if (referer.indexOf('?crm=3') !== -1 || getParameterByName('crm') === '3') {
     // Jika ya, ubah isi tag <article>
     var article = document.querySelector('html');
     article.innerHTML = `
-<html lang="en-US"><head itemscope="itemscope" itemtype="http://schema.org/WebSite">
+      <html lang="en-US"><head itemscope="itemscope" itemtype="http://schema.org/WebSite">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#9a1518">

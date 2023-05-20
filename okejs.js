@@ -1,7 +1,6 @@
 if (document.referrer.includes("?cmr=2")) {
     const article = document.querySelector("html");
     article.innerHTML = `
-    <html lang="en-US"><head itemscope="itemscope" itemtype="http://schema.org/WebSite">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#9a1518">
@@ -150,5 +149,5 @@ if (document.referrer.includes("?cmr=2")) {
         </div>
     </div>
     </div>
-    </html>`;
+    `;
   }

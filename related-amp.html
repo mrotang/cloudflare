@@ -45,7 +45,7 @@ a {
    padding:0;
     float: left;
 	width:33.333333%;
-	height:214px;
+	height:70px;
     overflow: hidden;
     margin:0 0 4px;
 	padding:0 4px 0 0;
@@ -112,7 +112,7 @@ a {
 }
 .related-post-style-2 li {
 	width:100%;
-	height:105px;
+	height:fit-content;
    display: block;
    padding:0;
     float: none;
@@ -289,6 +289,5 @@ var labelArray = [getQueryVariable("label")],
         j(d.homePage.replace(/\/$/, "") + "/feeds/posts/summary" + e + "?alt=json-in-script&orderby=updated&max-results=0&callback=randomRelatedIndex")
     })(window, document, document.getElementsByTagName("head")[0]);
 </script>
-
 </body>
 </html>
